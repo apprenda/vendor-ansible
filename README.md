@@ -9,8 +9,9 @@ The Dockerfile creates an image that contains all the dependencies that are nece
 
 Once the image is built, run the following to obtain a vendored Ansible package
 ```
-docker run --rm -v $(pwd)/out:/ansible apprenda/vendor-ansible \
-    pip install --install-option="--prefix=/ansible" ansible==2.1.4.0
+docker run --rm -v $(pwd)/ansible:/ansible apprenda/vendor-ansible \
+    pip install --install-option="--prefix=/ansible" ansible==2.1.4.0 \
+    tar -zcvf ansible.tar.gz ansible
 ```
 
 The `--install-option` flag is telling pip to install the ansible package to the `/ansible` directory.
