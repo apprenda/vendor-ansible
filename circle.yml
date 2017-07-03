@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    working_directory: /vendor-ansible
+    docker:
+      - image: apprenda/vendor-ansible
+    steps:
+      - checkout
+      - run:
+          name: Create Ansible archive
+          command: make
+      - store_artifacts:
+          path: ansible.tar.gz
