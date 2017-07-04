@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/apprenda/vendor-ansible/tree/master.svg?style=svg)](https://circleci.com/gh/apprenda/vendor-ansible/tree/master)
+
 # Vendoring Ansible
 
 Using python's `pip`, it is possible to install a python package and all it's
